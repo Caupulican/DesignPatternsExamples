@@ -1,0 +1,96 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{01D1976C-88D2-433D-9DA8-C1EEBAD31AB0}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Creational\Abstract Factory\ExampleAbstractFactory.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Structural\Adapter\ExampleAdapter.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Structural\Proxy\ExampleProxy.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Structural\Facade\ExampleFacade.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Structural\Decorator\ExampleDecorator.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Structural\Composite\ExampleComposite.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="ExampleAbstractFactory">
+        <MSBuild Projects="Creational\Abstract Factory\ExampleAbstractFactory.dproj"/>
+    </Target>
+    <Target Name="ExampleAbstractFactory:Clean">
+        <MSBuild Projects="Creational\Abstract Factory\ExampleAbstractFactory.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ExampleAbstractFactory:Make">
+        <MSBuild Projects="Creational\Abstract Factory\ExampleAbstractFactory.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ExampleAdapter">
+        <MSBuild Projects="Structural\Adapter\ExampleAdapter.dproj"/>
+    </Target>
+    <Target Name="ExampleAdapter:Clean">
+        <MSBuild Projects="Structural\Adapter\ExampleAdapter.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ExampleAdapter:Make">
+        <MSBuild Projects="Structural\Adapter\ExampleAdapter.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ExampleProxy">
+        <MSBuild Projects="Structural\Proxy\ExampleProxy.dproj"/>
+    </Target>
+    <Target Name="ExampleProxy:Clean">
+        <MSBuild Projects="Structural\Proxy\ExampleProxy.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ExampleProxy:Make">
+        <MSBuild Projects="Structural\Proxy\ExampleProxy.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ExampleFacade">
+        <MSBuild Projects="Structural\Facade\ExampleFacade.dproj"/>
+    </Target>
+    <Target Name="ExampleFacade:Clean">
+        <MSBuild Projects="Structural\Facade\ExampleFacade.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ExampleFacade:Make">
+        <MSBuild Projects="Structural\Facade\ExampleFacade.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ExampleDecorator">
+        <MSBuild Projects="Structural\Decorator\ExampleDecorator.dproj"/>
+    </Target>
+    <Target Name="ExampleDecorator:Clean">
+        <MSBuild Projects="Structural\Decorator\ExampleDecorator.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ExampleDecorator:Make">
+        <MSBuild Projects="Structural\Decorator\ExampleDecorator.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ExampleComposite">
+        <MSBuild Projects="Structural\Composite\ExampleComposite.dproj"/>
+    </Target>
+    <Target Name="ExampleComposite:Clean">
+        <MSBuild Projects="Structural\Composite\ExampleComposite.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ExampleComposite:Make">
+        <MSBuild Projects="Structural\Composite\ExampleComposite.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="ExampleAbstractFactory;ExampleAdapter;ExampleProxy;ExampleFacade;ExampleDecorator;ExampleComposite"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="ExampleAbstractFactory:Clean;ExampleAdapter:Clean;ExampleProxy:Clean;ExampleFacade:Clean;ExampleDecorator:Clean;ExampleComposite:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="ExampleAbstractFactory:Make;ExampleAdapter:Make;ExampleProxy:Make;ExampleFacade:Make;ExampleDecorator:Make;ExampleComposite:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
